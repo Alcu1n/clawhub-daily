@@ -3,46 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 CLAWHUB WILD | 2026.02.14</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>🔥 CLAWHUB 每日精选 | 2026年02月14日</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Rajdhani', sans-serif; background: #0a0a0f; color: #fff; min-height: 100vh; overflow-x: hidden; }
-        .bg-grid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(255,0,85,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,0,85,0.03) 1px, transparent 1px); background-size: 50px 50px; z-index: -2; }
-        .glow { position: fixed; width: 600px; height: 600px; border-radius: 50%; filter: blur(150px); opacity: 0.4; z-index: -1; animation: float 20s ease-in-out infinite; }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Rajdhani', sans-serif;
+            background: #0a0a0f;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,0,85,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,0,85,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -2;
+        }
+        
+        .glow {
+            position: fixed;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            filter: blur(150px);
+            opacity: 0.4;
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+        
         .glow-1 { background: #ff0055; top: -200px; right: -200px; }
         .glow-2 { background: #00d4ff; bottom: -200px; left: -200px; animation-delay: -10s; }
-        @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(50px, 50px) scale(1.1); } }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 50px) scale(1.1); }
+        }
+        
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
         header { text-align: center; margin-bottom: 60px; }
-        .logo { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; font-weight: 900; letter-spacing: 0.1em; background: linear-gradient(135deg, #ff0055 0%, #ff6b35 50%, #f7931e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; filter: drop-shadow(0 0 30px rgba(255,0,85,0.5)); }
-        .tagline { font-size: 1.2rem; letter-spacing: 0.3em; text-transform: uppercase; color: #888; margin: 20px 0; }
-        .date-badge { display: inline-block; background: linear-gradient(135deg, rgba(255,0,85,0.2) 0%, rgba(0,212,255,0.2) 100%); border: 1px solid rgba(255,255,255,0.1); padding: 10px 30px; border-radius: 30px; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; letter-spacing: 0.2em; }
-        .stats { display: flex; justify-content: center; gap: 60px; margin: 40px 0; flex-wrap: wrap; }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            background: linear-gradient(135deg, #ff0055 0%, #ff6b35 50%, #f7931e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 30px rgba(255,0,85,0.5));
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #888;
+            margin: 15px 0;
+        }
+        
+        .date-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(255,0,85,0.2) 0%, rgba(0,212,255,0.2) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+        
+        .date-badge .weekday {
+            color: #ff6b35;
+            font-weight: 500;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
         .stat { text-align: center; }
-        .stat-value { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fff 0%, #888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .stat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: #666; margin-top: 5px; }
+        
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+            letter-spacing: 0.1em;
+        }
+        
+        .intro {
+            text-align: center;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
         .skills { display: flex; flex-direction: column; gap: 30px; }
-        .skill-card { background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 35px; position: relative; overflow: hidden; transition: all 0.4s ease; }
-        .skill-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #ff0055 0%, #ff6b35 50%, #00d4ff 100%); transform: scaleX(0); transition: transform 0.4s ease; }
-        .skill-card:hover { transform: translateY(-5px); border-color: rgba(255,0,85,0.3); box-shadow: 0 20px 60px rgba(255,0,85,0.15); }
+        
+        .skill-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0055 0%, #ff6b35 50%, #00d4ff 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,0,85,0.3);
+            box-shadow: 0 20px 60px rgba(255,0,85,0.15);
+        }
+        
         .skill-card:hover::before { transform: scaleX(1); }
-        .rank { position: absolute; top: 20px; right: 25px; font-family: 'Orbitron', sans-serif; font-size: 4rem; font-weight: 900; opacity: 0.1; background: linear-gradient(135deg, #ff0055 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .skill-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .skill-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #ff0055 0%, #ff6b35 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
-        .skill-name { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 0.05em; }
-        .skill-name a { color: #fff; text-decoration: none; transition: color 0.3s; }
+        
+        .rank {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            opacity: 0.08;
+            background: linear-gradient(135deg, #ff0055 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .skill-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff0055 0%, #ff6b35 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .skill-info { flex: 1; }
+        
+        .category {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #ff6b35;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+        
+        .skill-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        
+        .skill-name a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
         .skill-name a:hover { color: #ff6b35; }
-        .skill-desc { font-size: 1.1rem; line-height: 1.7; color: #aaa; margin-bottom: 20px; padding-left: 65px; }
-        .skill-meta { display: flex; gap: 15px; flex-wrap: wrap; padding-left: 65px; }
-        .tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        .install-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #ff0055 0%, #ff6b35 100%); color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; }
-        .install-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,0,85,0.5); }
-        footer { text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); }
-        .footer-text { color: #666; font-size: 0.9rem; letter-spacing: 0.1em; }
-        .footer-text a { color: #ff6b35; text-decoration: none; }
-        .install-cmd { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px; margin: 30px auto; max-width: 600px; font-family: monospace; font-size: 0.9rem; color: #00d4ff; }
-        @media (max-width: 600px) { .logo { font-size: 2rem; } .skill-card { padding: 25px; } .skill-desc, .skill-meta { padding-left: 0; } }
+        
+        .skill-content {
+            margin-left: 65px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-desc {
+            font-size: 1rem;
+            color: #bbb;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .skill-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .skill-features li {
+            font-size: 0.95rem;
+            color: #888;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-features li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+        }
+        
+        .skill-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: 65px;
+        }
+        
+        .tag {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        
+        .install-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff0055 0%, #ff6b35 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: auto;
+            transition: all 0.3s;
+        }
+        
+        .install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,0,85,0.4);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .install-section {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .install-title {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        
+        .install-cmd {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px 20px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            color: #00d4ff;
+            display: inline-block;
+        }
+        
+        .install-cmd code {
+            color: #ff6b35;
+            background: rgba(255,107,53,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer-text a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            .logo { font-size: 2rem; }
+            .skill-card { padding: 25px; }
+            .skill-content, .skill-meta { margin-left: 0; }
+            .skill-header { flex-wrap: wrap; }
+            .rank { font-size: 3rem; }
+            .stats { gap: 30px; }
+        }
     </style>
 </head>
 <body>
@@ -52,24 +344,54 @@
     <div class="container">
         <header>
             <h1 class="logo">CLAWHUB</h1>
-            <p class="tagline">Daily Skills // Wild Edition</p>
-            <div class="date-badge">2026.02.14</div>
-            <div class="stats">
-                <div class="stat"><div class="stat-value">3,004</div><div class="stat-label">Total Skills</div></div>
-                <div class="stat"><div class="stat-value">50+</div><div class="stat-label">Categories</div></div>
-                <div class="stat"><div class="stat-value">TOP 3</div><div class="stat-label">Today's Pick</div></div>
+            <p class="tagline">每日精选 // 狂野版</p>
+            <div class="date-badge">
+                <span>2026年02月14日</span>
+                <span class="weekday">周六</span>
             </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">3,004</div>
+                    <div class="stat-label">社区 Skills</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">分类</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">TOP 3</div>
+                    <div class="stat-label">今日精选</div>
+                </div>
+            </div>
+            
+            <p class="intro">
+                每天从 ClawHub 精选 3 个最实用的 OpenClaw Skill。<br>
+                提升效率，扩展能力，让你的 AI 助手更强大。
+            </p>
         </header>
+
         <main class="skills">
             
             <article class="skill-card">
                 <span class="rank">01</span>
                 <div class="skill-header">
                     <div class="skill-icon">🔥</div>
-                    <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/rjmcgirr-pl/salesforce-dx/SKILL.md" target="_blank">salesforce-dx</a></h2>
+                    <div class="skill-info">
+                        <span class="category">🛠️ 实用工具</span>
+                        <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/emrekilinc/linear-issues/SKILL.md" target="_blank">linear-issues</a></h2>
+                    </div>
                 </div>
-                <p class="skill-desc">Query Salesforce data and manage sales pipelines</p>
-                <div class="skill-meta"><span class="tag">TOOL</span><span class="tag">HOT</span><a href="https://github.com/openclaw/skills/tree/main/skills/rjmcgirr-pl/salesforce-dx/SKILL.md" target="_blank" class="install-btn">View →</a></div>
+                <div class="skill-content">
+                    <p class="skill-desc">Interact with Linear for issue tracking.</p>
+                    <ul class="skill-features">
+                        <li>📊 实时监控与追踪</li>
+                    </ul>
+                </div>
+                <div class="skill-meta">
+                    <span class="tag">精选</span><span class="tag">实用</span><span class="tag">工具</span>
+                    <a href="https://github.com/openclaw/skills/tree/main/skills/emrekilinc/linear-issues/SKILL.md" target="_blank" class="install-btn">查看详情 →</a>
+                </div>
             </article>
         
 
@@ -77,10 +399,21 @@
                 <span class="rank">02</span>
                 <div class="skill-header">
                     <div class="skill-icon">🔥</div>
-                    <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/jeffaf/recipes/SKILL.md" target="_blank">recipes</a></h2>
+                    <div class="skill-info">
+                        <span class="category">🤖 AI 智能</span>
+                        <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/usamalatif/among-clawds/SKILL.md" target="_blank">among-clawds</a></h2>
+                    </div>
                 </div>
-                <p class="skill-desc">CLI for AI agents to find recipes for their humans.</p>
-                <div class="skill-meta"><span class="tag">TOOL</span><span class="tag">HOT</span><a href="https://github.com/openclaw/skills/tree/main/skills/jeffaf/recipes/SKILL.md" target="_blank" class="install-btn">View →</a></div>
+                <div class="skill-content">
+                    <p class="skill-desc">Play AmongClawds - social deduction game where AI agents</p>
+                    <ul class="skill-features">
+                        <li>🎯 专为效率而生</li><li>⚡ 快速响应</li><li>🔧 易于使用</li>
+                    </ul>
+                </div>
+                <div class="skill-meta">
+                    <span class="tag">精选</span><span class="tag">热门</span><span class="tag">人工智能</span>
+                    <a href="https://github.com/openclaw/skills/tree/main/skills/usamalatif/among-clawds/SKILL.md" target="_blank" class="install-btn">查看详情 →</a>
+                </div>
             </article>
         
 
@@ -88,16 +421,35 @@
                 <span class="rank">03</span>
                 <div class="skill-header">
                     <div class="skill-icon">🔥</div>
-                    <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/borahm/whoop/SKILL.md" target="_blank">whoop</a></h2>
+                    <div class="skill-info">
+                        <span class="category">⚡ API 工具</span>
+                        <h2 class="skill-name"><a href="https://github.com/openclaw/skills/tree/main/skills/dbeadle1/vector-control/SKILL.md" target="_blank">vector-control</a></h2>
+                    </div>
                 </div>
-                <p class="skill-desc">WHOOP morning check-in (recovery/sleep/strain) with suggestions.</p>
-                <div class="skill-meta"><span class="tag">TOOL</span><span class="tag">HOT</span><a href="https://github.com/openclaw/skills/tree/main/skills/borahm/whoop/SKILL.md" target="_blank" class="install-btn">View →</a></div>
+                <div class="skill-content">
+                    <p class="skill-desc">Control a Vector robot via Wirepod’s local HTTP API</p>
+                    <ul class="skill-features">
+                        <li>⚡ API 集成与数据交互</li>
+                    </ul>
+                </div>
+                <div class="skill-meta">
+                    <span class="tag">精选</span><span class="tag">热门</span><span class="tag">接口</span>
+                    <a href="https://github.com/openclaw/skills/tree/main/skills/dbeadle1/vector-control/SKILL.md" target="_blank" class="install-btn">查看详情 →</a>
+                </div>
             </article>
         
         </main>
+
         <footer>
-            <div class="install-cmd">⚡ npx clawhub@latest install &lt;skill-name&gt;</div>
-            <p class="footer-text">🤖 Generated by <a href="https://openclaw.ai" target="_blank">OpenClaw</a> | Source: <a href="https://clawhub.ai" target="_blank">ClawHub</a></p>
+            <div class="install-section">
+                <div class="install-title">💡 安装 Skill</div>
+                <div class="install-cmd">npx clawhub@latest install <code>skill-name</code></div>
+            </div>
+            <p class="footer-text">
+                🤖 由 <a href="https://openclaw.ai" target="_blank">OpenClaw</a> 自动生成 | 
+                数据来源: <a href="https://clawhub.ai" target="_blank">ClawHub</a> | 
+                每日更新
+            </p>
         </footer>
     </div>
 </body>
